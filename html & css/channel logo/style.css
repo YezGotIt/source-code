@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.box {
+  width: 500px;
+  height: 500px;
+  background-color: #dbdbd4;
+  position: relative;
+  overflow: hidden;
+}
+
+.box > .triangle {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  background-color: red;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  transform: rotate(-33deg);
+}
+
+.box > .triangle:nth-child(1) {
+  left: -5rem;
+  top: -3.9rem;
+  background-color: rgba(244, 106, 4, 0.4);
+}
+
+.box > .triangle:nth-child(2) {
+  left: -5rem;
+  top: 0.7rem;
+  background-color: rgba(48, 48, 48, 0.4);
+}
+
+.box > .triangle:nth-child(3) {
+  left: -5rem;
+  top: 5rem;
+  background-color: rgba(244, 106, 4, 0.4);
+}
+
+.innerBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+@font-face {
+  font-family: "myFont";
+  src: url("fonts/Lazord-Regular.woff2") format("woff");
+}
+
+.innerBox > p {
+  font-size: 62px;
+  line-height: 1.4;
+  font-weight: 500;
+  font-family: "myFont";
+  text-transform: uppercase;
+  color: rgba(48, 48, 48, 1);
+  margin: 1rem 0;
+}
+
+.innerBox > p > span {
+  color: rgba(244, 106, 4, 1);
+}
+
+.innerBox > p:first-child::before{
+    content: "<";
+}
+
+.innerBox > p:last-child::after{
+    content: ">";
+    color: rgba(244, 106, 4, 1);
+}
