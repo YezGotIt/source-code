@@ -39,6 +39,14 @@
         link: "https://www.instagram.com/p/CXIDOK6vAg_/",
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
+    {
+        name: "qr code generator",
+        file: "html & js/qr code generator",
+        medium: "instagram",
+        link: "",
+        source: "https://github.com/YezGotIt/source-code/tree/main/",
+      },
+    
   ];
 
   let createProjectList = (projectList) => {
