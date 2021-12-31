@@ -46,6 +46,13 @@
         link: "",
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
+    {
+        name: "counter timer",
+        file: "html & js/counter timer",
+        medium: "instagram",
+        link: "",
+        source: "https://github.com/YezGotIt/source-code/tree/main/",
+      },
     
   ];
 
