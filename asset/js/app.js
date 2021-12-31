@@ -47,7 +47,7 @@
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
     {
-        name: "counter timer",
+        name: "countdown timer",
         file: "html & js/counter timer",
         medium: "instagram",
         link: "",
