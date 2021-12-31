@@ -1,0 +1,129 @@
+
+:root {
+  --bg: #333;
+  --textColor: #f6f4f3;
+  --firstBox: #d87200;
+  --secondBox: #ff3e41;
+  --thirdBox: #ffb20c;
+  --fourBox: #2186ff;
+  --lastBox: #e10a0a;
+  --numberColor: #333;
+  --boxInsideTextColor: #ffffff;
+}
+
+body {
+  background: var(--bg);
+  max-height: 100%;
+}
+
+.main {
+  position: relative;
+  margin: auto;
+  width: 850px;
+  height: 480px;
+}
+
+.demo {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin-top: 0.5em;
+  font-size: 0.75em;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+  color: var(--textColor);
+  align-items: center;
+}
+
+.addSpace {
+  margin-bottom: 1.5rem;
+}
+
+.addFont{
+  font-size: 20px;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin-top: 2em;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--textColor);
+}
+
+h1 sup {
+  text-transform: lowercase;
+  color: var(--secondBox);
+}
+
+#countdown {
+  color: var(--textColor);
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-size: 0.7em;
+  letter-spacing: 5px;
+  margin-top: 5%;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds,
+.left {
+  display: inline-block;
+  padding: 10px 20px;
+  width: 120px;
+  border-radius: 10px;
+  color: var(--boxInsideTextColor);
+}
+
+.days {
+  background-color: var(--firstBox);
+}
+
+.hours {
+  background-color: var(--secondBox);
+}
+
+.minutes {
+  background-color: var(--thirdBox);
+}
+
+.seconds {
+  background-color: var(--fourBox);
+}
+
+.left {
+  background-color: var(--lastBox);
+}
+
+.c-number {
+  font-family: "Montserrat", sans-serif;
+  color: var(--numberColor);
+  font-size: 5em;
+}
+
+
+@media only screen and (max-width: 500px) {
+  body {
+    overflow: scroll;
+  }
+
+  .main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+  }
+
+  .days,
+  .hours,
+  .minutes,
+  .seconds,
+  .left {
+    margin: 5px;
+    padding: 10px 20px;
+  }
+}
