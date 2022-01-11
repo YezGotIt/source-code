@@ -1,6 +1,8 @@
 
 # Twitter Scraping Bot (Educational Purpose)
 
+### See in [YouTube](https://youtu.be/NStkkIA80ek)
+
 ### It will be scraped a particular account timeline if you give the range of date (eg: 2021-09-13 to 2021-09- 18).
 
 
