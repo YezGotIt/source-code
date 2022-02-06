@@ -49,8 +49,15 @@
     {
         name: "countdown timer",
         file: "html & js/counter timer",
-        medium: "instagram",
-        link: "",
+        medium: "youtube",
+        link: "https://youtu.be/nDcJLwKFomU",
+        source: "https://github.com/YezGotIt/source-code/tree/main/",
+      },
+    {
+        name: "coding a paper bill",
+        file: "html & css/coding a paper bill",
+        medium: "youtube",
+        link: "https://youtu.be/3-idSv3Dn10",
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
     
