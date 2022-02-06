@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
+    <title>Bill</title>
+    <style>
+        :root {
+            --font-one: "Courier Prime", monospace;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f1f1f1;
+            font-family: var(--font-one);
+        }
+
+        .container {
+            min-width: 420px;
+            min-height: 850px;
+            box-shadow: 0 7px 29px 0 rgb(100 100 111 / 20%);
+            padding: auto;
+        }
+
+        .mainHead {
+            margin: 1rem;
+            padding: 0.5rem;
+        }
+
+        .upperCase {
+            text-transform: uppercase;
+        }
+
+        .normalText {
+            text-transform: none;
+        }
+
+        .centerText {
+            text-align: center;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .block {
+            display: block;
+            margin-bottom: 3px;
+            margin-left: 5px;
+        }
+
+        .billNo {
+            font-weight: 700;
+        }
+
+        .tokenNo {
+            font-size: 25px;
+        }
+
+        .size {
+            font-size: 23px;
+        }
+
+        .table {
+            margin: 0 auto;
+            padding: 8px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td,
+        th {
+            border-bottom: 2px dashed #202020;
+            text-align: left;
+            padding: 8px;
+            text-transform: uppercase;
+            font-size: 19px;
+            font-weight: 400;
+        }
+
+        td.removeLine {
+            border-bottom: none;
+        }
+
+        .aboutLine {
+            border-top: 2px dashed #202020;
+        }
+
+
+        .fontSize {
+            font-size: 26px;
+        }
+
+        .fontSizeSmall {
+            font-size: 16px;
+        }
+
+        .thankNote {
+            margin: 1rem;
+        }
+
+        .bold-up7 {
+            font-weight: 700;
+        }
+
+        .bold-up5 {
+            font-weight: 600;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                min-width: 352px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="centerText">
+                <h1 class="upperCase mainHead">perambur sri srinivasa <br> sweet & snacks</h1>
+                <span class="upperCase">No-65A,C.v.naidu salai tiruvallur.<br> 600000, <span
+                        class="normalText">Phone9999999999.</span></span>
+                <br>
+                <br>
+                <span class="block">Phone : 9999999999/98</span>
+                <span class="upperCase">GSTIN : h3g4h2hj34ffdzipvc</span>
+                <span class="block billNo">BillNo:154502</span>
+                <span class="block billNo tokenNo">Token No#:114</span>
+                <span class="upperCase">Takeaway</span>
+            </div>
+            <br>
+            <span class="block bold">Customer Name: Mr.gg</span>
+            <span class="block">Cashier# : <span class="upperCase">card</span></span>
+            <span class="block">Waiter# : <span class="upperCase">some-343434</span></span>
+            <span class="block bold upperCase">date : <span class="size">12/08/2021, 09:09 Am</span></span>
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="aboutLine">item name</th>
+                            <th class="aboutLine">price</th>
+                            <th class="aboutLine"> qty</th>
+                            <th class="aboutLine">sub</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="bold-up7">idly 1pc</td>
+                            <td class="bold-up5">15.24</td>
+                            <td class="bold-up5"> 4.000</td>
+                            <td class="bold-up5">60.25</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="centerText normalText removeLine">Sub Total Rs</td>
+                            <td class="removeLine bold-up5">60.25</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="centerText removeLine">cgst : 2.50%</td>
+                            <td class="removeLine bold-up5">1.50</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="centerText removeLine">sgst : 2.50%</td>
+                            <td class="removeLine bold-up5">1.5o</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="centerText normalText removeLine">Round off</td>
+                            <td class="removeLine bold-up5">0.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="centerText normalText bold aboutLine fontSize removeLine">Total Rs
+                            </td>
+                            <td class="bold aboutLine fontSize removeLine">64.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="normalText fontSizeSmall">Total Items - 1, No of Quantity - 4.000
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <span class="centerText block thankNote bold-up5">Thank you! Visi us Again!!</span>
+                <span class="bold fontSize">Amount To Pay : Rs 64.00</span>
+                <br><br>
+                <div class="centerText"><svg id="barcode"></svg></div>
+                <footer class="centerText">
+                    <span class="bold fontSizeSmall">Technology Partner www.dummy.com</span>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        JsBarcode("#barcode", "gg-num2721", { background: "#f1f1f1", font: "Courier Prime", fontSize: 0 });
+    </script>
+</body>
+
+</html>
