@@ -1,7 +1,5 @@
 # For YouTube Creators (Educational Purpose)
 
-### See in [Instagram](https://www.instagram.com/tv/CXqQ0tLFFTR/)
-
 ### Watch this video (Tamil) 
 
 1. https://www.youtube.com/watch?v=BKks3jF3kWU
@@ -43,6 +41,8 @@ python app.py -l <channel link>
  https://www.youtube.com/watch?v=zhkhdD2hkQw&t (English)
 
  https://www.youtube.com/watch?v=cgNQgcUgq0U&t (Hindi)
+
+ https://www.youtube.com/watch?v=lxvr7zgNMWY (Hindi)
 
 ---
 ### Disclaimer:

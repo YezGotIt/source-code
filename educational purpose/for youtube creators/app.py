@@ -1,6 +1,5 @@
 # Modules
 from selenium import  webdriver
-from threading import Thread
 from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 import time , re, sys, xlsxwriter, argparse, validators
@@ -77,32 +76,6 @@ class YouTube:
             print("[-] Not a valid link")
             sys.exit(1)
 
-    # scrolling the page 
-    def scroll_collect_info(self, driver):
-        try:
-            main = driver.find_element_by_xpath('//*[@id="contents"]/ytd-item-section-renderer')
-            contents = main.find_element_by_id('contents')
-            contents = contents.find_element_by_xpath('//*[@id="contents"]/ytd-grid-renderer')
-            items = contents.find_element_by_id('items')
-            tags = items.find_elements_by_tag_name('ytd-grid-video-renderer')
-            for item in tags:
-                videoMeta = item.find_element_by_id("video-title")
-                info = videoMeta.get_attribute('aria-label')
-                title = videoMeta.get_attribute('title')
-                if self.refernce_info == info and self.refernce_title == title:
-                    print("[+] Scroll is over")
-                    self.match = True       
-        except Exception as e:
-            print("Error")
-            print(e)
-
-    # Getting the refernce point  
-    def get_refernce_point(self, driver):
-        data = driver.find_element_by_css_selector("#items > ytd-grid-video-renderer:nth-child(1)")
-        videoMeta = data.find_element_by_id("video-title")
-        self.refernce_info = videoMeta.get_attribute('aria-label')
-        self.refernce_title = videoMeta.get_attribute('title')
-
     # Getting the content from driver to covert into lxml    
     def get_content_html(self, driver):
         print("[+] gathering information from the channel videos")
@@ -165,16 +138,6 @@ class YouTube:
             f.writelines(lineTxt)
         print("[+] channel info create {}".format(fileName))
 
-    # checking the refernce point
-    def refernce_the_refernce_point(self):
-        options = webdriver.ChromeOptions()
-        options.add_experimental_option('excludeSwitches', ['enable-logging'])
-        driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
-        driver.get(self.turl)
-        time.sleep(2)
-        self.get_refernce_point(driver)
-        driver.close()
-
     # start the process
     def start(self):
         options = webdriver.ChromeOptions()
@@ -184,24 +147,20 @@ class YouTube:
         driver.get(self.url.replace("videos", "about"))
         time.sleep(2)
         self.get_about_the_channel(driver)
-        self.createTxt()
-        driver.get(self.url)
-        print("[+] Getting the refernce...")
-        time.sleep(3)
-        self.get_refernce_point(driver) 
+        self.createTxt() 
         driver.get("{}?view=0&sort=da&flow=grid".format(self.url))
         time.sleep(3)
         
-        while (self.match==False):
-            js = "window.scrollBy(0, 2500);"
-            driver.execute_script(js)
-            self.count += 1
-            print("[+] {} scroll".format(self.count))
-            if self.count % 5 == 0:
-                t = Thread(target = self.refernce_the_refernce_point(), args =( ), daemon = True)
-                t.start()
+        height = driver.execute_script("return document.documentElement.scrollHeight")
+        lastheight = 0
+        while (self.match == False):
+            if lastheight == height:
+                print("[+] scroll to the end")
+                self.match = True
+            lastheight = height
+            driver.execute_script("window.scrollTo(0, " + str(height) + ");")
             time.sleep(2)
-            self.scroll_collect_info(driver) 
+            height = driver.execute_script("return document.documentElement.scrollHeight") 
 
         self.get_content_html(driver) 
         print("[+] Done")
