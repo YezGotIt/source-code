@@ -9,15 +9,11 @@ class YouTube:
     # Initial values
     def __init__(self, url):
         self.url = url
-        self.turl = ""
         self.list = []
         self.channelInfo = {}
-        self.uniqueYoutube = set()
         self.count = 0
         self.match = False
-        self.refernce_info = ""
-        self.refernce_title = ""
-    
+
     # Checking the youtube name only.
     def check_url(self, url):
         for x in url.split("/"):
