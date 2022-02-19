@@ -21,7 +21,7 @@
 #### PROCEDURE:
 - Download the zip folder from Github and unzip it
 Here is the link to download zip 👉
-<a href='https://github.com/YezGotIt/source-code/blob/main/educational%20purpose/for%20youtube%20creators%20-%20partial%20feature/for%20youtube%20creators%20-%20partial%20feature.zip'>HERE</a>
+<a href='https://github.com/YezGotIt/source-code/raw/main/educational%20purpose/for%20youtube%20creators%20-%20partial%20feature/for%20youtube%20creators%20-%20partial%20feature.zip'>HERE</a>
 - Open the folder in VS Code or 
 - RUN, this command pulls out all the require modules:
 
