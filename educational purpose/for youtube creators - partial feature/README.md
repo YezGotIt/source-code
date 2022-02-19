@@ -9,7 +9,7 @@
 2. https://www.youtube.com/watch?v=7c9eBJ2qAmY
 
 
-### It will be scraped YouTube channel page to collect the information such as the about page i.e(join date, description, total views, location,total subscribers) and video which post on your channel i.e(video link,views,isStreamed,relative time, duration).
+### It will be scraped YouTube channel page to collect the information such as the about page i.e(join date, description, total views, location,total subscribers) and video which post on your channel i.e(video link ,views ,isStreamed, relative time, duration).
 <br>
 
 #### REQUIREMENT:
