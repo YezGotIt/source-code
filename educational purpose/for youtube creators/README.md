@@ -9,14 +9,14 @@
 2. https://www.youtube.com/watch?v=7c9eBJ2qAmY
 
 
-### It will be scraped YouTube channel page to collect the information such as the about page and video which post on your channel.
-<br>
+### It will be scraped from YouTube channel pages to collect information such as the about page (join date, description, total views, location, total subscribers), and videos which are posted on your channel (video title, video link, views, isStreamed, relative time, duration). If you use the advanced mode, you will get all of this information, or otherwise normal. (**Note:** by default advanced mode is off).
+
 
 #### REQUIREMENT:
 - Download [Python](https://python.org) latest version.
 - Install pip (Pip Installs Python)
     - To install pip. Run this command `python get-pip.py` or `pip install pip` 
-<br>
+
 
 #### PROCEDURE:
 - Download the zip folder from Github and unzip it
@@ -32,11 +32,11 @@ pip install -r requirements.txt
 ![run code](./screenshot/1.png)
 - RUN, this command given below (Run the app.py):
 ```
-python app.py -l <channel link>
+python app.py -l <channel link> -a <no>
 ```
 ![run code](./screenshot/2.png)
 
-<br>
+
 
  ### I have taken refernce from here:
 
