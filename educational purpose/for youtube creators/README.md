@@ -32,7 +32,7 @@ pip install -r requirements.txt
 ![run code](./screenshot/1.png)
 - RUN, this command given below (Run the app.py):
 ```
-python app.py -l <channel link> -a <no>
+python app.py -l <channel link> -a <no/yes>
 ```
 ![run code](./screenshot/2.png)
 
