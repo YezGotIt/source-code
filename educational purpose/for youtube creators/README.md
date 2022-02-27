@@ -9,7 +9,11 @@
 2. https://www.youtube.com/watch?v=7c9eBJ2qAmY
 
 
-### It will be scraped from YouTube channel pages to collect information such as the about page (join date, description, total views, location, total subscribers), and videos which are posted on your channel (video title, video link, views, isStreamed, relative time, duration). If you use the advanced mode, you will get all of this information, or otherwise normal. (**Note:** by default advanced mode is off).
+It will be scraped from YouTube channel pages to collect information such as. 
+ - About page ( join date, description, total views, location, total subscribers )
+ - Videos which are posted on your channel ( video title, video link, views, isStreamed, relative time, duration ). 
+
+If you use the advanced mode, you will get all of this information, or otherwise normal. (**Note:** by default advanced / -a mode is off).
 
 
 #### REQUIREMENT:
