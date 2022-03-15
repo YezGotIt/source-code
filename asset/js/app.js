@@ -60,6 +60,13 @@
         link: "https://youtu.be/3-idSv3Dn10",
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
+    {
+        name: "blue heart animation",
+        file: "html & css/blue heart animation",
+        medium: "youtube",
+        link: "",
+        source: "https://github.com/YezGotIt/source-code/tree/main/",
+      },
     
   ];
 
