@@ -64,7 +64,7 @@
         name: "blue heart animation",
         file: "html & css/blue heart animation",
         medium: "youtube",
-        link: "",
+        link: "https://youtu.be/r35x9tKmB4w",
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
     
