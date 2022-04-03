@@ -12,13 +12,6 @@
       source: "https://github.com/YezGotIt/source-code/tree/main/",
     },
     {
-      name: "wave animation",
-      file: "html & css/wave affect",
-      medium: "youtube",
-      link: "https://youtu.be/Ds9pCBXIDVo",
-      source: "https://github.com/YezGotIt/source-code/tree/main/",
-    },
-    {
       name: "simple CRUD Operation",
       file: "subscriber asked/simple crud operation",
       medium: "youtube",
@@ -67,6 +60,13 @@
         link: "https://youtu.be/r35x9tKmB4w",
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
+    {
+      name: "wave animation",
+      file: "html & css/wave affect",
+      medium: "youtube",
+      link: "https://youtu.be/Ws-W32_PRt0",
+      source: "https://github.com/YezGotIt/source-code/tree/main/",
+    },
     
   ];
 
