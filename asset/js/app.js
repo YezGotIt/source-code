@@ -12,7 +12,7 @@
       source: "https://github.com/YezGotIt/source-code/tree/main/",
     },
     {
-      name: "wave affect",
+      name: "wave animation",
       file: "html & css/wave affect",
       medium: "youtube",
       link: "https://youtu.be/Ds9pCBXIDVo",
