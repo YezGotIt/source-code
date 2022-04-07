@@ -36,7 +36,7 @@
         name: "qr code generator",
         file: "html & js/qr code generator",
         medium: "instagram",
-        link: "",
+        link: "https://www.instagram.com/reel/CYJfBkoKZoa",
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
     {
@@ -71,7 +71,7 @@
         name: "wished card",
         file: "html & js/wished card",
         medium: "youtube",
-        link: "",
+        link: "https://youtube.com/shorts/G0oJOav99JY",
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
     
