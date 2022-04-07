@@ -67,6 +67,13 @@
       link: "https://youtu.be/Ws-W32_PRt0",
       source: "https://github.com/YezGotIt/source-code/tree/main/",
     },
+    {
+        name: "wished card",
+        file: "html & js/wished card",
+        medium: "youtube",
+        link: "",
+        source: "https://github.com/YezGotIt/source-code/tree/main/",
+      },
     
   ];
 
