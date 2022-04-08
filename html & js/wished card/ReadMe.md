@@ -2,7 +2,7 @@
 
 ### Create your card and share it with your friends
 
-#### Method to be followed (**Note**: making your own image)
+#### Method to be followed (**Note**: making your own card)
 - upload your photo to [imgbb](https://imgbb.com/)
 - upload your custom/own fonts in github
   - goto `./asset/fonts/<name>` 
