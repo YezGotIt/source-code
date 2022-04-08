@@ -1,4 +1,4 @@
-### [Wished card]()
+### [Wished card site live!](https://yezgotit.github.io/source-code/html%20&%20js/wished%20card/index.html)
 
 ### Create your card and share it with your friends
 
@@ -24,4 +24,4 @@
   },
 ```
 
-[Watch Our Video]()
+[Watch Our Video](https://youtube.com/shorts/G0oJOav99JY)
