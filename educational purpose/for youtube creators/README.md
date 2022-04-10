@@ -9,11 +9,7 @@
 2. https://www.youtube.com/watch?v=7c9eBJ2qAmY
 
 
-It will be scraped from YouTube channel pages to collect information such as. 
- - About page ( join date, description, total views, location, total subscribers )
- - Videos which are posted on your channel ( video title, video link, views, isStreamed, relative time, duration ). 
-
-If you use the advanced mode, you will get all of this information, or otherwise normal. (**Note:** by default advanced / -a mode is off).
+### It will be scraped from YouTube channel pages to collect information such as the about page (join date, description, total views, location, total subscribers), and videos which are posted on your channel (video title, video link, views, isStreamed, relative time, duration). If you use the advanced mode, you will get all of this information, or otherwise normal. (**Note:** by default advanced mode is off).
 
 
 #### REQUIREMENT:
@@ -25,7 +21,7 @@ If you use the advanced mode, you will get all of this information, or otherwise
 #### PROCEDURE:
 - Download the zip folder from Github and unzip it
 Here is the link to download zip 👉
-<a href='https://github.com/YezGotIt/source-code/raw/main/educational%20purpose/for%20youtube%20creators/for%20youtube%20creators.zip'>HERE</a>
+<a href='https://github.com/YezGotIt/source-code/raw/main/educational%20purpose/For YouTube Creators - partial feature/for%20youtube%20creators.zip'>HERE</a>
 - Open the folder in VS Code or 
 - RUN, this command pulls out all the require modules:
 
@@ -36,7 +32,7 @@ pip install -r requirements.txt
 ![run code](./screenshot/1.png)
 - RUN, this command given below (Run the app.py):
 ```
-python app.py -l <channel link> -a <no/yes>
+python app.py -l <channel link> -a <no>
 ```
 ![run code](./screenshot/2.png)
 

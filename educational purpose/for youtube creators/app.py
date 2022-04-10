@@ -75,8 +75,9 @@ class YouTube:
     def get_content_html(self, driver):
         print("[+] gathering information of the channel videos")
         content = driver.page_source.encode('utf-8').strip()
-        time.sleep(1)
-        soup = BeautifulSoup(content, 'lxml')
+        time.sleep(2)
+        soup = BeautifulSoup(content, 'html5lib')
+        time.sleep(2)
         metaData = soup.findAll("a", id="video-title")
         durations = soup.findAll("span", id="text")
         count = 1
@@ -234,7 +235,7 @@ class YouTube:
 
 parser = argparse.ArgumentParser(description="For creators")
 parser.add_argument("-l", "--link", required=True, help="Youtube channel link")
-parser.add_argument("-a", "--advance", default="No", help="Scarpe in advance mode. By default is No")
+parser.add_argument("-a", "--full", default="No", help="Scarpe in advance mode. By default is No")
 args = vars(parser.parse_args())
 
 # checking the main class
