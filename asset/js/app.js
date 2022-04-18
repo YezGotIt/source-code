@@ -74,7 +74,13 @@
         link: "https://youtube.com/shorts/G0oJOav99JY",
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
-    
+    {
+        name: "red heartbeat animation",
+        file: "html & css/red heartbeat animation",
+        medium: "instagram",
+        link: "",
+        source: "https://github.com/YezGotIt/source-code/tree/main/",
+      },
   ];
 
   let createProjectList = (projectList) => {
