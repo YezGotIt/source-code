@@ -92,6 +92,14 @@
         link: "",
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
+    {
+      isShow: false,
+        name: "adBlocker Detect",
+        file: "html & js/adblocker detect",
+        medium: "instagram",
+        link: "",
+        source: "https://github.com/YezGotIt/source-code/tree/main/",
+      },
   ];
 
   let createProjectList = (projectList) => {
