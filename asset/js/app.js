@@ -5,6 +5,7 @@
 
   let data = [
     {
+      isShow: true,
       name: "channel logo",
       file: "html & css/channel logo",
       medium: "youtube",
@@ -12,6 +13,7 @@
       source: "https://github.com/YezGotIt/source-code/tree/main/",
     },
     {
+      isShow: true,
       name: "simple CRUD Operation",
       file: "subscriber asked/simple crud operation",
       medium: "youtube",
@@ -19,6 +21,7 @@
       source: "https://github.com/YezGotIt/source-code/tree/main/",
     },
     {
+      isShow: true,
       name: "send mail using js",
       file: "instagram/send mail using js",
       medium: "instagram",
@@ -26,6 +29,7 @@
       source: "https://github.com/YezGotIt/source-code/tree/main/",
     },
     {
+      isShow: true,
         name: "get ip address",
         file: "instagram/get ip address",
         medium: "instagram",
@@ -33,6 +37,7 @@
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
     {
+      isShow: true,
         name: "qr code generator",
         file: "html & js/qr code generator",
         medium: "instagram",
@@ -40,6 +45,7 @@
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
     {
+      isShow: true,
         name: "countdown timer",
         file: "html & js/counter timer",
         medium: "youtube",
@@ -47,6 +53,7 @@
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
     {
+      isShow: true,
         name: "coding a paper bill",
         file: "html & css/coding a paper bill",
         medium: "youtube",
@@ -54,6 +61,7 @@
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
     {
+      isShow: true,
         name: "blue heart animation",
         file: "html & css/blue heart animation",
         medium: "youtube",
@@ -61,6 +69,7 @@
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
     {
+      isShow: true,
       name: "wave animation",
       file: "html & css/wave affect",
       medium: "youtube",
@@ -68,6 +77,7 @@
       source: "https://github.com/YezGotIt/source-code/tree/main/",
     },
     {
+      isShow: false,
         name: "wished card",
         file: "html & js/wished card",
         medium: "youtube",
@@ -75,6 +85,7 @@
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
     {
+      isShow: false,
         name: "red heartbeat animation",
         file: "html & css/red heartbeat animation",
         medium: "instagram",
@@ -87,7 +98,7 @@
     console.log("projectList:", projectList);
     const root = id("root");
     root.innerHTML = "";
-    projectList.forEach((project) => {
+    projectList.filter(i => i.isShow).forEach((project) => {
       console.log("project:", project);
       const div = document.createElement("div");
       div.setAttribute("class", "col-md-4 mb-4");
