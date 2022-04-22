@@ -77,7 +77,7 @@
       source: "https://github.com/YezGotIt/source-code/tree/main/",
     },
     {
-      isShow: false,
+      isShow: true,
         name: "wished card",
         file: "html & js/wished card",
         medium: "youtube",
