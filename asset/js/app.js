@@ -85,7 +85,7 @@
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
     {
-      isShow: false,
+      isShow: true,
         name: "red heartbeat animation",
         file: "html & css/red heartbeat animation",
         medium: "instagram",
