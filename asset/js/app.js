@@ -93,7 +93,7 @@
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
     {
-      isShow: false,
+      isShow: true,
         name: "adBlocker Detect",
         file: "html & js/adblocker detect",
         medium: "instagram",
