@@ -97,7 +97,7 @@
         name: "adBlocker Detect",
         file: "html & js/adblocker detect",
         medium: "instagram",
-        link: "",
+        link: "https://www.instagram.com/tv/CdN7l4UrSPq",
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
   ];
