@@ -89,7 +89,7 @@
         name: "red heartbeat animation",
         file: "html & css/red heartbeat animation",
         medium: "instagram",
-        link: "",
+        link: "https://www.instagram.com/reel/Cc746t4MjVf/",
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
     {
