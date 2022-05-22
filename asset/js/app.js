@@ -100,6 +100,14 @@
         link: "https://www.instagram.com/tv/CdN7l4UrSPq",
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
+     {
+      isShow: true,
+        name: "paste yt link",
+        file: "html & js/paste yt link",
+        medium: "instagram",
+        link: "",
+        source: "https://github.com/YezGotIt/source-code/tree/main/",
+      },
   ];
 
   let createProjectList = (projectList) => {
