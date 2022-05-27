@@ -60,11 +60,11 @@ function createCard({title, image,frame, site}){
     if(site){
         message = `
         <a class="text-center btn btn-primary mt-3" target="_blank"
-        href="https://www.ssyoutube.com/watch?v=${site}">Visit 
+        href="https://www.ssyoutube.com/watch?v=${site}">Visit-1
         <i class="fa-solid fa-up-right-from-square"></i>
-        </a> || 
+        </a> &nbsp;&nbsp;&nbsp;
         <a class="text-center btn btn-primary mt-3" target="_blank"
-        href="https://www.youtube5s.com/watch?v=${site}">Visit 
+        href="https://www.youtube5s.com/watch?v=${site}">Visit-2 
         <i class="fa-solid fa-up-right-from-square"></i>
         </a>
         `
