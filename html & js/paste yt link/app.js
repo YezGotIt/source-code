@@ -62,6 +62,10 @@ function createCard({title, image,frame, site}){
         <a class="text-center btn btn-primary mt-3" target="_blank"
         href="https://www.ssyoutube.com/watch?v=${site}">Visit 
         <i class="fa-solid fa-up-right-from-square"></i>
+        </a> || 
+        <a class="text-center btn btn-primary mt-3" target="_blank"
+        href="https://www.youtube5s.com/watch?v=${site}">Visit 
+        <i class="fa-solid fa-up-right-from-square"></i>
         </a>
         `
     }
