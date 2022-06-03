@@ -113,7 +113,7 @@
         name: "fadeout animation",
         file: "html & css/fadeout animation",
         medium: "instagram",
-        link: "",
+        link: "https://www.instagram.com/reel/CeWLP4yPxmA",
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
   ];
