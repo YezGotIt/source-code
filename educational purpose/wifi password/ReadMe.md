@@ -1,4 +1,4 @@
-# Wifi Password (Educational Purpose)
+# Wifi Password (Educational Purpose) | ONLY with Window
 
 
 ### See in [Instagram](https://www.instagram.com/) video
