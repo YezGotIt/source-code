@@ -116,6 +116,14 @@
         link: "https://www.instagram.com/reel/CeWLP4yPxmA",
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
+    {
+      isShow: true,
+        name: "local storage",
+        file: "html & js/local storage",
+        medium: "youtube",
+        link: "https://youtube.com/shorts/HG6AVqSy61c",
+        source: "https://github.com/YezGotIt/source-code/tree/main/",
+      },
   ];
 
   let createProjectList = (projectList) => {
