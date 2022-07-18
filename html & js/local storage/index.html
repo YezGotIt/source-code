@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local storage</title>
+  </head>
+  <body>
+    <script>
+      const name = localStorage.getItem("name");
+
+      if (!name) {
+        const value = prompt("Enter your name");
+        addItem("name", value);
+        display(value)
+      }
+
+      function display(value) {
+        const h1 = document.createElement("h1");
+        h1.innerText = value;
+        h1.style.fontSize = "80px";
+        document.body.append(h1);
+      }
+
+      if (name) display(name);
+
+      // * function call
+      function addItem(key, value) {
+        return localStorage.setItem(key, value);
+      }
+
+      function showItem(key) {
+        return localStorage.getItem(key);
+      }
+
+      function deleteItem(key) {
+        return localStorage.removeItem(key);
+      }
+
+      function clearItem() {
+        return localStorage.clear();
+      }
+    </script>
+  </body>
+</html>
