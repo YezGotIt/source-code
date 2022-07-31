@@ -124,6 +124,14 @@
         link: "https://youtube.com/shorts/HG6AVqSy61c",
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
+    {
+      isShow: true,
+        name: "blob",
+        file: "html & js/blob",
+        medium: "youtube",
+        link: "https://youtu.be/822qRTmFyto",
+        source: "https://github.com/YezGotIt/source-code/tree/main/",
+      },
   ];
 
   let createProjectList = (projectList) => {
