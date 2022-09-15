@@ -135,7 +135,7 @@
     {
       isShow: true,
         name: "css svg loader",
-        file: "html & css",
+        file: "html & css/css-svg-loader",
         medium: "youtube",
         link: "",
         source: "https://github.com/YezGotIt/source-code/tree/main/",
