@@ -1,0 +1,38 @@
+.box{
+    display: flex;
+    align-items: center;
+}
+
+.box > div{
+    margin-right: 10px;
+}
+
+.icon{
+    position: relative;
+}
+
+.forsvg {
+  display: inline-block;
+  vertical-align: text-bottom;
+  box-sizing: border-box;
+}
+
+.forsvg > svg {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.loader{
+    height: 90px;
+    width: 90px;
+    
+}
+
+.image{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top:22% ;
+    left: 20%;
+}
