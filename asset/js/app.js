@@ -132,6 +132,14 @@
         link: "https://youtu.be/822qRTmFyto",
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
+    {
+      isShow: true,
+        name: "css svg loader",
+        file: "html & css",
+        medium: "youtube",
+        link: "",
+        source: "https://github.com/YezGotIt/source-code/tree/main/",
+      },
   ];
 
   let createProjectList = (projectList) => {
