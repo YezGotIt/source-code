@@ -142,7 +142,7 @@
       },
     {
       isShow: true,
-        name: "Async & Defer",
+        name: "async & defer",
         file: "html & js/async & defer",
         medium: "youtube",
         link: "https://youtu.be/MA5zCcUOS1g",
