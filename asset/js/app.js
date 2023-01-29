@@ -143,7 +143,7 @@
     {
       isShow: true,
         name: "Async & Defer",
-        file: "html & css/async & defer",
+        file: "html & js/async & defer",
         medium: "youtube",
         link: "https://youtu.be/MA5zCcUOS1g",
         source: "https://github.com/YezGotIt/source-code/tree/main/",
