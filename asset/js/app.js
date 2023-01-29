@@ -137,7 +137,15 @@
         name: "css svg loader",
         file: "html & css/css-svg-loader",
         medium: "youtube",
-        link: "",
+        link: "https://youtube.com/shorts/Yh8ep-1zhrA",
+        source: "https://github.com/YezGotIt/source-code/tree/main/",
+      },
+    {
+      isShow: true,
+        name: "Async & Defer",
+        file: "html & css/async & defer",
+        medium: "youtube",
+        link: "https://youtu.be/MA5zCcUOS1g",
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
   ];
