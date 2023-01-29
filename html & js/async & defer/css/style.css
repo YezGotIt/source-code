@@ -1,0 +1,11 @@
+* {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.btn{
+  padding: 7px 10px;
+  font-size: 18px;
+  border-radius: 10px;
+}
