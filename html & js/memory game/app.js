@@ -11,7 +11,7 @@
   let viewTwiceCount = 2,
     totalMGCount = 0;
   let MGList = [];
-  const TOTAL_CARD = 12;
+  const TOTAL_CARD = window.screen.width > 512 ? 12 : 6;
 
   // get random character
   function getRandomCharacter() {
