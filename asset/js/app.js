@@ -150,7 +150,7 @@
       },
     {
       isShow: true,
-        name: "mamory game",
+        name: "memory game",
         file: "html & js/memory game",
         medium: "instagram",
         link: "",
