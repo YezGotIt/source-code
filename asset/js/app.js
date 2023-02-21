@@ -148,6 +148,14 @@
         link: "https://youtu.be/MA5zCcUOS1g",
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
+    {
+      isShow: true,
+        name: "mamory game",
+        file: "html & js/memory game",
+        medium: "youtube",
+        link: "",
+        source: "https://github.com/YezGotIt/source-code/tree/main/",
+      },
   ];
 
   let createProjectList = (projectList) => {
