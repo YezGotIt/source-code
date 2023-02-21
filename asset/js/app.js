@@ -152,7 +152,7 @@
       isShow: true,
         name: "mamory game",
         file: "html & js/memory game",
-        medium: "youtube",
+        medium: "instagram",
         link: "",
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
