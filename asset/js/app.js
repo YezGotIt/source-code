@@ -153,7 +153,7 @@
         name: "memory game",
         file: "html & js/memory game",
         medium: "instagram",
-        link: "",
+        link: "https://www.instagram.com/reel/CpA0nNjOsHL",
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
   ];
