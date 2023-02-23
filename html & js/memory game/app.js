@@ -1,17 +1,50 @@
 (() => {
   // dom elements
-  const containerRoot = document.getElementById("container");
-  const controlRoot = document.getElementById("control");
-  const viewTwiceBtn = document.getElementById("viewTwiceBtn");
-  const MGScore = document.getElementById("MGScore");
+  const id = (element) => document.getElementById(`${element}`);
+  const startGame = id("startGame");
+  const mainGame = id("mainGame");
 
   // variables
   let MemoryGameList = [];
-  let cardContainer = null;
+  let cardContainer = null,
+    containerRoot = null,
+    controlRoot = null,
+    MGScore = null,
+    gameTime = null,
+    shareBtn = null;
+  viewTwiceBtn = null;
   let viewTwiceCount = 2,
     totalMGCount = 0;
   let MGList = [];
   const TOTAL_CARD = window.screen.width > 512 ? 12 : 6;
+  let TOTAL_TURN = TOTAL_CARD;
+  const VIEW_TIME_INTERVAL = 15;
+
+  // user event
+  startGame.addEventListener("click", () => {
+    console.log("started");
+    mainGame.style.display = "block";
+    startGame.style.display = "none";
+    mainGame.innerHTML = `
+  <div class="control add-margin-bottom" id="controlRoot">
+  <div><button class="viewTwice" id="viewTwiceBtn">View Twice (2)</button></div>
+    <div id="gameTime" class="gameTime"></div>
+      <div>
+        <h2 class="totalScore">Score: <span id="MGScore">0</span></h2>
+      </div>
+    </div>
+  <div class="container" id="containerRoot"></div>
+  `;
+    // init function
+    containerRoot = id("containerRoot");
+    controlRoot = id("controlRoot");
+    MGScore = id("MGScore");
+    viewTwiceBtn = id("viewTwiceBtn");
+    gameTime = id("gameTime");
+    console.log("viewTwiceBtn:", viewTwiceBtn);
+    viewTwiceBtn.addEventListener("click", viewTwiceHandler);
+    getRandomCharacter();
+  });
 
   // get random character
   function getRandomCharacter() {
@@ -26,6 +59,7 @@
     }
     MemoryGameList = [...uniqueCharacters, ...uniqueCharacters];
     shuffleArray(MemoryGameList);
+    console.log("MemoryGameList:", MemoryGameList);
     createCard();
   }
 
@@ -48,6 +82,9 @@
       containerRoot.appendChild(card);
       return card;
     });
+    // console.log('viewTwiceBtn:', viewTwiceBtn)
+
+    viewTwiceHandler();
     cardContainer.forEach((element) => {
       element.addEventListener("click", () => {
         if (element.classList.contains("clicked")) {
@@ -56,6 +93,7 @@
         }
 
         element.classList.add("clicked");
+        element.style.pointerEvents = "none";
         let id = element.id;
         let content = element.children[0].children[1].innerText;
         MGList.push({ id, content });
@@ -70,9 +108,14 @@
       containerRoot.style.pointerEvents = "none";
     }
     const [first, second] = MGList;
+    TOTAL_TURN--;
+    gameTime.textContent = `No of turn: ${TOTAL_TURN}`;
+    if (TOTAL_TURN === 0) createImage();
 
     if (first.content !== second.content) {
       setTimeout(() => {
+        cardContainer[first.id].style.pointerEvents = "auto";
+        cardContainer[second.id].style.pointerEvents = "auto";
         cardContainer[first.id].classList.add("wrong");
         cardContainer[second.id].classList.add("wrong");
       }, 800);
@@ -87,10 +130,21 @@
     if (first.content === second.content && first.id !== second.id) {
       totalMGCount++;
       MGScore.textContent = totalMGCount;
-
       cardContainer[first.id].style.pointerEvents = "none";
       cardContainer[second.id].style.pointerEvents = "none";
       setTimeout(() => {
+        cardContainer[first.id].classList.remove("clicked");
+        cardContainer[second.id].classList.remove("clicked");
+        cardContainer[first.id].children[0].children[0].textContent =
+          first.content;
+        cardContainer[second.id].children[0].children[0].textContent =
+          second.content;
+        cardContainer[first.id].children[0].children[0].classList.add(
+          "success"
+        );
+        cardContainer[second.id].children[0].children[0].classList.add(
+          "success"
+        );
         cardContainer[first.id].children[0].children[1].classList.add(
           "success"
         );
@@ -98,13 +152,8 @@
           "success"
         );
         containerRoot.style.pointerEvents = "auto";
-        if (totalMGCount === TOTAL_CARD) {
-          controlRoot.innerHTML = ``;
-          containerRoot.innerHTML = `
-            <h1>Game Over&nbsp; &nbsp; &nbsp; &nbsp; </h1>
-            <h2><a href="/">Refresh to play again</a></h2>
-            `;
-        }
+        // check if all card is matched
+        if (totalMGCount === TOTAL_CARD) createImage();
       }, 800);
     }
     MGList = [];
@@ -121,8 +170,9 @@
 
   // view button
   function viewTwiceHandler() {
+    console.log("okay call");
     if (viewTwiceCount <= 0) return;
-    let countdown = 10;
+    let countdown = VIEW_TIME_INTERVAL;
     let timerId;
     viewTwiceBtn.disabled = true;
     viewTwiceBtn.textContent = countdown;
@@ -132,7 +182,9 @@
       if (countdown === 0) {
         clearInterval(timerId);
         viewTwiceBtn.disabled = false;
-        viewTwiceBtn.textContent = `View Twice (${--viewTwiceCount})`;
+        viewTwiceBtn.textContent = `View Count ${
+          --viewTwiceCount === 0 ? "Is None" : viewTwiceCount
+        }`;
       }
     }, 1000);
 
@@ -149,18 +201,102 @@
     }, countdown * 1000);
   }
 
-  // init function
-  getRandomCharacter();
+  // create the image
+  function createImage() {
+    setTimeout(() => {
+      // html to canvas & download
+      html2canvas(document.body).then(function (canvas) {
+        const base64String = canvas.toDataURL("image/png");
+        const sendFile = makeFile(base64String.split("base64,").pop());
+        const divContainer = document.createElement("div");
+        divContainer.id = "divContainer";
+        document.body.appendChild(divContainer);
+        const text = document.createElement("p");
+        text.setAttribute("class", "texts");
+        text.innerHTML = `<button class="viewTwice"><a id="downloadLink" href="${base64String}" download="memory-game.png">Download</a></button> || <button class="viewTwice" id="shareBtn">Share</button><h3><a href="/">Play again</a></h3>`;
+        id("divContainer").appendChild(text);
+        // share button
+        id("shareBtn").addEventListener("click", () => {
+          if (navigator.canShare && navigator.canShare({ files: [sendFile] })) {
+            navigator
+              .share({
+                url: window.location.href,
+                files: [sendFile],
+                title: "Your Memory Game Score",
+                text: `Photos from Memory Game. Here is the link to play the game: ${window.location.href}`,
+              })
+              .then(() => console.log("share success"))
+              .catch((err) => console.log(`errro : ${err}`));
+          } else {
+            navigator
+              .share({
+                url: window.location.href,
+                title: "Your Memory Game Score",
+                text: `Here is the link to play the game: ${window.location.href}`,
+              })
+              .then(() => console.log("share success"))
+              .catch((err) => console.log(`errro : ${err}`));
+          }
+        });
+        const imageDiv = document.createElement("img");
+        imageDiv.id = "imageDiv";
+        imageDiv.width = window.screen.width;
+        imageDiv.height = window.screen.height;
+        imageDiv.alt = "memory-game";
+        imageDiv.src = canvas.toDataURL("image/png");
+        id("divContainer").appendChild(imageDiv);
+      });
+      containerRoot.innerHTML = "";
+      controlRoot.innerHTML = "";
+      document.querySelector("footer").style.display = "none";
+      document.querySelector("footer").innerHTML = ``;
+      mainGame.innerHTML = "";
+    }, 3000);
+  }
+
+  // convert base64 to file
+  function makeFile(base64String) {
+    const contentType = "image/png"; // content type of the file
+    const filename = "myimage.png"; // name of the file
+
+    // convert base64 string to ArrayBuffer
+    const binaryString = atob(base64String);
+    const len = binaryString.length;
+    const bytes = new Uint8Array(len);
+    for (let i = 0; i < len; i++) {
+      bytes[i] = binaryString.charCodeAt(i);
+    }
+    const buffer = bytes.buffer;
+
+    // create a new File object from the ArrayBuffer
+    return new File([buffer], filename, { type: contentType });
+  }
+
+  // convert base64 to blob
+  function b64toBlob(b64Data, contentType = "", sliceSize = 512) {
+    const byteCharacters = window.atob(b64Data);
+    const byteArrays = [];
+
+    for (let offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+      const slice = byteCharacters.slice(offset, offset + sliceSize);
+      const byteNumbers = new Array(slice.length);
+
+      for (let i = 0; i < slice.length; i++) {
+        byteNumbers[i] = slice.charCodeAt(i);
+      }
+
+      const byteArray = new Uint8Array(byteNumbers);
+      byteArrays.push(byteArray);
+    }
+
+    const blob = new Blob(byteArrays, { type: contentType });
+    return blob;
+  }
 
   // create the footer
   (() => {
-    const footer = document.createElement("footer");
-    footer.innerHTML = `
-          <div class="footer-container">
-          Made with <span class="heart">❤</span> by <a href="https://ygi.li">@yezgotit</a>
-            </div>`;
-    document.body.appendChild(footer);
+    document.querySelector("footer").innerHTML = `
+    Made with <span class="heart">❤</span> by <a href="https://ygi.li">@yezgotit</a>
+    `;
   })();
-
-  viewTwiceBtn.addEventListener("click", viewTwiceHandler);
 })();

@@ -2,11 +2,11 @@ body {
   font-family: "Roboto", sans-serif;
   margin-top: 2rem;
 }
+
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  place-items: center;
 }
 
 .card-container {
@@ -19,6 +19,7 @@ body {
   position: relative;
   width: 180px;
   height: 180px;
+
   transition: transform 0.75s;
   transform-style: preserve-3d;
 }
@@ -39,6 +40,7 @@ body {
   height: 100%;
   backface-visibility: hidden;
   font-weight: 600;
+  border-radius: 10px;
 }
 
 .front {
@@ -59,12 +61,22 @@ body {
   font-size: 18px;
   font-weight: 500;
   outline: none;
-  margin-bottom: 3rem;
   border-radius: 10px;
+}
+
+.add-margin-bottom {
+  margin-bottom: 3rem;
 }
 
 .success {
   background-color: #3fa883;
+  color: #f2f2f2;
+  font-size: 36px;
+}
+
+.imageDiv {
+  width: 800px;
+  height: 600px;
 }
 
 .card-container.clicked .card {
@@ -74,6 +86,7 @@ body {
 .control {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .footer-container {
@@ -90,6 +103,16 @@ body {
 
 .wrong {
   animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.gameTime {
+  font-size: 35px;
+  font-weight: 700;
+  margin: 5px;
+}
+
+.startGame {
+  text-align: center;
 }
 
 @keyframes shake {
@@ -114,6 +137,11 @@ body {
   }
 }
 
+.texts {
+  font-size: 26px;
+  font-weight: 500;
+}
+
 @media only screen and (max-width: 600px) {
   .container {
     display: grid;
@@ -127,5 +155,34 @@ body {
 
   .front > h2 {
     font-size: 1.3rem;
+  }
+
+  .viewTwice {
+    margin: 5px 2px;
+    padding: 5px 10px;
+    font-size: 17px;
+    font-weight: 500;
+    outline: none;
+    border-radius: 10px;
+  }
+
+  .texts {
+    font-size: 19px;
+    font-weight: 500;
+  }
+
+  .totalScore {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 5px;
+  }
+
+  .gameTime {
+    font-size: 19px;
+    font-weight: 500;
+  }
+
+  .add-margin-bottom {
+    margin-bottom: 2rem;
   }
 }

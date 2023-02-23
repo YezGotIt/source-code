@@ -11,17 +11,13 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <title>Memory | Game</title>
   </head>
   <body>
-    <div class="control" id="control">
-      <button class="viewTwice" id="viewTwiceBtn">View Twice (2)</button>
-      <div>
-        <h2>Total Score: <span id="MGScore">0</span></h2>
-      </div>
-    </div>
-    <div class="container" id="container"></div>
-
+    <div class="startGame"><button class="viewTwice" id="startGame">Start</button></div>
+    <div class="mainGame" id="mainGame"></div>
+    <footer class="footer-container"></footer>
     <script src="./app.js"></script>
   </body>
 </html>
