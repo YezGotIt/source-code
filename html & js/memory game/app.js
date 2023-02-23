@@ -153,7 +153,7 @@
         );
         containerRoot.style.pointerEvents = "auto";
         // check if all card is matched
-        if (totalMGCount === TOTAL_CARD) createImage();
+        //if (totalMGCount === TOTAL_CARD) createImage();
       }, 800);
     }
     MGList = [];
