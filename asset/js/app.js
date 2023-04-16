@@ -156,6 +156,14 @@
         link: "https://www.instagram.com/reel/CpA0nNjOsHL",
         source: "https://github.com/YezGotIt/source-code/tree/main/",
       },
+    {
+      isShow: true,
+      name: "CSS media query",
+      file: "html & css/media-query",
+      medium: "youtube",
+      link: "https://youtube.com/shorts/4KY1efqS8Lk",
+      source: "https://github.com/YezGotIt/source-code/tree/main/",
+    },
   ];
 
   let createProjectList = (projectList) => {
